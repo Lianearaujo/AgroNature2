@@ -1,3 +1,9 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1aab39c9-b7dd-4cb1-8e27-23734e153557/resourceGroups/agroooooo/providers/Microsoft.Web/sites/NatAgro",
+    "appService.deploySubpath": "."
 }
