@@ -1,0 +1,193 @@
+body{
+  
+  padding-top: 50px;
+  padding-bottom:150px;
+  background: 
+  linear-gradient(
+      rgba(35, 231, 61, 0.7),
+      rgba(41, 124, 48, 0.8),
+      rgba(71 72 71 / 90%)
+    );
+  background-size: cover;
+  
+}
+
+#square {
+  position: relative;
+    width: 800px;
+    height: 450px;
+  display: block;
+  margin: auto;
+    background: #F3F6F8;
+  z-index: 3;
+}
+    
+#leftSquare {
+    width: 40%;
+  display: block;
+  margin:  auto;
+    height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+    background:linear-gradient(
+      rgba(36, 37, 37, 0.7),
+      rgba(59, 139, 56, 0.8),
+      rgba(2, 247, 63, 0.9)
+    ),  url("https://images.pexels.com/photos/1852/dawn-landscape-mountains-nature.jpg?h=350&auto=compress");
+  background-size: cover;
+  border-radius: 0%;
+  z-index: 1;
+}
+
+#rightSquare {
+    width: 60%;
+  display: block;
+  margin:  auto;
+    height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+    background:none;
+  background-size: cover;
+  border-radius: 0%;
+  z-index: 1;
+}
+
+#circle{
+    border-radius: 50%;
+    width: 60%;
+    height: 40%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 8%;
+    right: 20%;
+  }
+
+.brand{
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 10%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  
+}
+
+#title{
+  position: absolute;
+  display: block;
+  top: 38%;
+  left: 25%;
+  margin: auto;
+  width: 50%;
+  height: 60%;
+  z-index: 1;
+}
+#subtitle{
+  position: absolute;
+  left: 7%;
+  bottom: 32%;
+  color: white;
+  font-family:"lato";
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+
+#container{
+  
+    margin-top: 15%;
+}
+
+.signup{
+  margin: auto;
+  color: rgb(0, 0, 0);
+  font-family:"paytone one";
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.button{
+  display: block;
+  font-family:"paytone one";
+  border-radius: 4px;
+background-color: #1504fa;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 12px;
+padding: 10px;
+width: 100px;
+transition: all 0.5s;
+cursor: pointer;
+margin: auto;
+}
+
+#twitter{
+  
+  padding-left: 10px;
+}
+
+#footer{
+  display: block;
+  margin: auto;
+  color: #333333;
+  font-family:"lato";
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+
+#terms{
+  cursor: pointer;
+  color: #3f11e6ea;
+}
+
+
+form{
+  
+  padding: 20px 0;
+  position: relative;
+}
+
+.optin{
+  
+   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 75%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 18px;
+  color: #333333;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+  
+  
+}
+.optin:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.optin:focus {
+  background-color: white;
+  width: 90%;
+  color: #000000;
+}
+
