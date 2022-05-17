@@ -107,6 +107,6 @@ app.post("/salvarcadastro",(req, res) => {
 })
 
 //SERVIDOR LOCAL ---------------------------------------------------------------
-app.listen(5656, () =>{
+app.listen(8080, () =>{
   console.log("A aplicação está funcionando!");
 })
