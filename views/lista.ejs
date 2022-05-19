@@ -227,106 +227,24 @@
 </div>
 
 <div id="services" class="container-fluid text-center">
-  <h2>Tipos de agronegócio verde</h2>
-  <h4>Seu agronegócio é de algum tipo listada ? Então tará em boas mãos com nossa equipe</h4>
-  <br>
-  <div class="row slideanim container">
-    <div class="col-sm-4 ">
-      <span class="logo-small"><img src="./img/cafe.png" width="60" height="60"></span>
-
-      <h4>Café</h4>
-      <p>Amor brasileiro</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="logo-small"><img src="./img/arroz.png" width="60" height="60"></span>
-      <h4>Arroz</h4>
-      <p>O queridinho</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="lock logo-small"><img src="./img/feijao.png" width="60" height="60"></span>
-      <h4>Feijão</h4>
-      <p>Outro queridinho tanto quanto o outro</p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim container">
-    <div class="col-sm-4">
-      <span class="logo-small"><img src="./img/cebola.png" width="60" height="60"></span>
-      <h4>Cebola</h4>
-      <p>Não pode faltar em nenhuma cozinha</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="logo-small"><img src="./img/batata.png" width="60" height="60"></span>
-      <h4>Batata</h4>
-      <p>Menos ranço *mais* batatas</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="logo-small"><img src="./img/uva.png" width="60" height="60"></span>
-      <h4>Uva</h4>
-      <p>Classico</p>
-    </div>
+  <div class="animated bounceInDown" id="rightSquare">
+    <div id="container">
+    <h2 class="signup">Agendamentos previstos </h2>
+    <form method="GET" action="/lista">
+        <input class="optin" type="text" name="nome" placeholder="Nome" autocomplete="off" id="nome" />
+                   
+      <input class="optin" type="email" name="email" placeholder="Email" autocomplete="off" id="email" onclick="erro()">
+        <input class="optin" type="text" name="telefone" placeholder="Telefone" autocomplete="off" id="telefone" />
+        <input class="optin" type="text" name="endereco" placeholder="Endereco" id="endereco">
+        <input  class="optin" type="text" name="complemento" placeholder="Complemento" id="complemento">   
+        <input  class="optin" type="date" name="data" placeholder="Data" id="data">  
+        <button class="animated infinite pulse button btn btn-info">
+        <span><i class="" aria-hidden="true"></i></span><span id="registrar">Registrar agendamento</span>
+        </button>
+        <h3 id="footer">Ao continuar você concorda com nossos <span id="terms">termos e condições.</span></h3>
+    </form>  
   </div>
 </div>
-
-
-<div id="sobre" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>Sobre nossa empresa</h2><br>
-      <h4>Sustentabilidade é Responsabilidade são nosso lema</h4><br>
-      <p>A empresa entrou no mercado com uma missão, trazer para o agronegócio a união entre a produção de alimentos com respeito ao meio ambiente e a lucratividade.</p>
-    </div>
-    <div class="col-sm-4">
-      <span><img src="./img/susten.png" width="100" height="100"></span>
-    </div>
-  </div>
-</div>
-
-<div id="sobre" class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span><img src="./img/sus.png" width="100" height="100"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Um pouco mais...</h2><br>
-      <h4><strong>O que fazemos ?:</strong> Fazemos consultoria para o fazendeiro, com uma equipe altamente treinada, assim conseguimos atingir o maior numero de produtores com as tecnicas e tecnlogias mais avançadas da atualidade.</h4><br>
-      <p><strong>Missão:</strong> Concientizar e mostrar que a produção sustentável é o unico meio para que nossas futuras gerações não tenha que conhecer nossas irresponsabilidades de um planeta devastado</p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div id="contato" class="container-fluid bg-grey">
-  <h2 class="text-center">Contato</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Responderemos o mais rapido possivel</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Petrolina-PE, Brasil</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +55 (87) 91234-5678</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Agronature@gmail.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Enviar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 

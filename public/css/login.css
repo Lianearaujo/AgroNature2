@@ -101,14 +101,14 @@ body{
 
 #container{
   
-    margin-top: 15%;
+    margin-top: 2%;
 }
 
 .signup{
   margin: auto;
   color: rgb(0, 0, 0);
   font-family:"paytone one";
-  font-size: 12px;
+  font-size: 22px;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;

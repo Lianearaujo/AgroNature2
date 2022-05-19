@@ -25,16 +25,17 @@
       
     <div class="animated bounceInDown" id="rightSquare">
       <div id="container">
-      <h2 class="signup">Registrar </h2>
-      <form method="POST" action="/salvarcadastro">
-          <input class="optin" type="text" name="nome" placeholder="Nome" autocomplete="off" id="" />
+      <h2 class="signup">Registrar agendamento </h2>
+      <form method="POST" action="/salvaragendamento">
+          <input class="optin" type="text" name="nome" placeholder="Nome" autocomplete="off" id="nome" />
                      
         <input class="optin" type="email" name="email" placeholder="Email" autocomplete="off" id="email" onclick="erro()">
           <input class="optin" type="text" name="telefone" placeholder="Telefone" autocomplete="off" id="telefone" />
-          <input class="optin" type="password" name="senha" placeholder="Senha" id="senha">
-          <input  class="optin" type="password" name="confisenha" placeholder="Confirmar Senha" id="confisenha">   
+          <input class="optin" type="text" name="endereco" placeholder="Endereco" id="endereco">
+          <input  class="optin" type="text" name="complemento" placeholder="Complemento" id="complemento">   
+          <input  class="optin" type="date" name="data" placeholder="Data" id="data">  
           <button class="animated infinite pulse button btn btn-info">
-          <span><i class="" aria-hidden="true"></i></span><span id="twitter">Registrar</span>
+          <span><i class="" aria-hidden="true"></i></span><span id="registrar">Registrar agendamento</span>
           </button>
           <h3 id="footer">Ao continuar você concorda com nossos <span id="terms">termos e condições.</span></h3>
       </form>  

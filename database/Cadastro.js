@@ -12,9 +12,25 @@ const Cadastro = connection.define('cadastros', {
     allowNull: false
   },
 
-  senha: {
-    type: Sequelize.STRING,
+  telefone: {
+    type: Sequelize.TEXT,
     allowNull: false
+  },
+
+  complemento: {
+    type: Sequelize.TEXT,
+    allowNull: true
+  },
+
+  endereco: {
+    type: Sequelize.TEXT,
+    allowNull: true
+  },
+  
+
+  data: {
+    type: Sequelize.DATE,
+    allowNull: true
   }
 })
 

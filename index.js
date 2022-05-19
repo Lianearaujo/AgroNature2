@@ -3,9 +3,9 @@ const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
 const Cadastro = require("./database/Cadastro");
-const Entrar = require("./database/Entrar");
-const transporter = require("./database/nodemailer");
-const md5 = require('md5');
+//const Lista = require("./database/Lista");
+var path = require('path');
+
 
 //BANCO DE DADOS ---------------------------------------------------------------
 connection.authenticate().then(() => {console.log("Conexão feita com o banco de dados!")})
@@ -14,6 +14,7 @@ connection.authenticate().then(() => {console.log("Conexão feita com o banco de
 });
 
 //BIBLIOTECAS ------------------------------------------------------------------
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -30,81 +31,57 @@ app.get("/", (req, res) => {
 
 })
 
-app.get("/Entrar", (req, res) => {
-  Cadastro.findAll()
-  .then((cadastro) => {
-    res.render("login", {cadastro: cadastro});
-  })
 
-})
 
-app.post("/login", (req, res) => {
-  let email = req.body.email;
-  let senha = md5(req.body.senha);
 
-  Cadastro.findOne({
-    where: {email: email, senha: senha}
-  }).then((cadastro) => {
-    if(cadastro != undefined){
-      res.render("obrigado")
-    } else if (email == '' || senha == '' || cadastro == undefined) {
-      res.redirect("/", {cadastro: cadastro})
-    }
-  })
-    
-})
 
 app.get("/cadastrar", (req, res) => {
   res.render("cadastro")
 })
 
-app.post("/salvarcadastro",(req, res) => {
+
+
+
+app.post("/salvaragendamento",(req, res) => {
   let nome = req.body.nome;
   let email = req.body.email;
-  let senha = md5(req.body.senha);
-  let confisenha = md5(req.body.confisenha);
+  let telefone = req.body.telefone;
+  let complemento = req.body.complemento;
+  let endereco = req.body.endereco;
+  let data = req.body.data;
   
   Cadastro.create({
     nome: nome,
     email: email,
-    senha: senha
+    telefone: telefone,
+    complemento: complemento,
+    endereco: endereco,
+    data: data
   }).then(() => {
-    if(senha != confisenha || nome == "" || email == "" || senha == "" || confisenha == ""){
-      Cadastro.destroy({
-        where: {
-          nome: nome,
-          email: email,
-          senha: senha
-        }
-      }).then(() => {
-        res.redirect("/cadastrar")
+        res.redirect("/agendamentoConcluido")
       })
-      
-       
-    } else {
-      res.redirect("/")
-      transporter.sendMail({
-        from: "Liane Araujo <lianearaujo177@gmail.com>",
-        to: email,
-        subject: "Obrigado por testar minha aplicação!",
-        html: `
-          <html>
-          <body>
-            <p>Olá <strong>${nome}</strong> Obrigado</p>
-            <p>Teste</p><br><br>
-            
-          </body>
-          </html>
-        `
-      }).then((msg) => {
-        console.log(msg);
-      }).catch((erro) => {
-        console.log(erro);
+})
+
+
+
+app.get("/lista", async(req, res) => {
+  await Cadastro.findAll()
+  .then((dataCadastros) =>{
+      return res.json({
+        erro:false,
+        dataCadastros
       })
-    }
-    
+  }).catch(()=>{
+    return res.status(400).json({
+      erro:true
+    })
   })
 })
+
+
+app.get("/agendamentoConcluido", (req, res) => {
+    res.render('agendamento'); 
+  })
 
 //SERVIDOR LOCAL ---------------------------------------------------------------
 app.listen(5656, () =>{

@@ -1,7 +1,7 @@
 {
-  "name": "login-node",
+  "name": "AgroNature-node",
   "version": "1.0.0",
-  "description": "Sistema de login simples com Node e Express",
+  "description": "WebSite Agronegocio projeto faculdade",
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -12,12 +12,14 @@
     "md5": "^2.3.0",
     "mysql2": "^2.2.5",
     "nodemailer": "^6.4.13",
-    "sequelize": "^6.3.5",
+    "path": "^0.12.7",
+    "sequelize": "^6.19.2",
     "sequelize-cli": "^6.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Stênio",
+  "author": "Liane Araujo",
+  "Email": "lianearaujo177@gmail.com",
   "license": "ISC"
 }
