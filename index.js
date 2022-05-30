@@ -5,6 +5,9 @@ const connection = require("./database/database");
 const Cadastro = require("./database/Cadastro");
 //const Lista = require("./database/Lista");
 var path = require('path');
+const req = require("express/lib/request");
+const fs = require("fs");
+const res = require("express/lib/response");
 
 
 //BANCO DE DADOS ---------------------------------------------------------------
@@ -22,12 +25,26 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//TESTES ------------------------------------------------------------------------
+
+// if (req.url === "/"){
+//   const lista = path.join(__dirname,'views', 'lista.html');
+//   fs.readFileSync(lista, 'utf8', (err,data) => {
+//     if (err) throw err;
+//     console.log('funcionando');
+//     //res.end(agendamentoConcluido)
+//   })
+
+// }
+
+
+
 //ROTAS ------------------------------------------------------------------------
 app.get("/", (req, res) => {
-  Cadastro.findAll()
-  .then((cadastro) => {
-    res.render("index", {cadastro: cadastro});
-  })
+  //Cadastro.findAll()
+  //.then((cadastro) => {
+    res.render("index");
+  //})
 
 })
 
